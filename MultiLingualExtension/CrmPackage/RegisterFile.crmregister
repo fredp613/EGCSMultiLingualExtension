@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Register xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns="http://schemas.microsoft.com/crm/2011/tools/pluginregistration">
+  <Solutions>
+    <Solution Assembly="MultiLingualExtension.Plugins.dll" Id="346fb27c-6195-e611-93fe-06a5b6453db2" IsolationMode="Sandbox" SourceType="Database">
+      <PluginTypes>
+        <Plugin Description="Plug-in to PostMultiLingualEntityCreate" FriendlyName="PostMultiLingualEntityCreate" Name="MultiLingualExtension.Plugins.PostMultiLingualEntityCreate" Id="5f0277c4-6395-e611-93fe-06a5b6453db2" TypeName="MultiLingualExtension.Plugins.PostMultiLingualEntityCreate">
+          <Steps>
+            <clear />
+            <Step CustomConfiguration="" Name="PostMultiLingualEntityCreate" Description="Post-Operation of Multi Lingual Entity Create" Id="600277c4-6395-e611-93fe-06a5b6453db2" MessageName="Create" Mode="Synchronous" PrimaryEntityName="fp_multilingualentity" Rank="1" SecureConfiguration="" Stage="PostOutsideTransaction" SupportedDeployment="ServerOnly">
+              <Images />
+            </Step>
+          </Steps>
+        </Plugin>
+        <Plugin Description="Plug-in to PostMultiLingualEntityUpdate" FriendlyName="PostMultiLingualEntityUpdate" Name="MultiLingualExtension.Plugins.PostMultiLingualEntityUpdate" Id="630277c4-6395-e611-93fe-06a5b6453db2" TypeName="MultiLingualExtension.Plugins.PostMultiLingualEntityUpdate">
+          <Steps>
+            <clear />
+            <Step CustomConfiguration="" Name="PostMultiLingualEntityUpdate" Description="Post-Operation of Multi Lingual Entity Update" Id="640277c4-6395-e611-93fe-06a5b6453db2" MessageName="Update" Mode="Synchronous" PrimaryEntityName="fp_multilingualentity" Rank="1" SecureConfiguration="" Stage="PostOutsideTransaction" SupportedDeployment="ServerOnly">
+              <Images>
+                <Image Attributes="fp_name" EntityAlias="fp_name" Id="670277c4-6395-e611-93fe-06a5b6453db2" MessagePropertyName="Target" ImageType="PostImage" />
+              </Images>
+            </Step>
+          </Steps>
+        </Plugin>
+        <Plugin Description="Plug-in to PreMultiLingualEntityDelete" FriendlyName="PreMultiLingualEntityDelete" Name="MultiLingualExtension.Plugins.PreMultiLingualEntityDelete" Id="680277c4-6395-e611-93fe-06a5b6453db2" TypeName="MultiLingualExtension.Plugins.PreMultiLingualEntityDelete">
+          <Steps>
+            <clear />
+            <Step CustomConfiguration="" Name="PreMultiLingualEntityDelete" Description="Pre-Operation of Multi Lingual Entity Delete" Id="690277c4-6395-e611-93fe-06a5b6453db2" MessageName="Delete" Mode="Synchronous" PrimaryEntityName="fp_multilingualentity" Rank="1" SecureConfiguration="" Stage="PreInsideTransaction" SupportedDeployment="ServerOnly">
+              <Images>
+                <Image Attributes="fp_name" EntityAlias="fp_name" Id="6c0277c4-6395-e611-93fe-06a5b6453db2" MessagePropertyName="Target" ImageType="PreImage" />
+              </Images>
+            </Step>
+          </Steps>
+        </Plugin>
+      </PluginTypes>
+    </Solution>
+  </Solutions>
+  <XamlWorkflows />
+</Register>
