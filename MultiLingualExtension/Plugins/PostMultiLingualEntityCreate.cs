@@ -55,7 +55,7 @@ namespace MultiLingualExtension.Plugins
 
                     if (!new MultiLingual(service, tracingService, entityForPlugin).generatePluginSteps())
                     {
-                        tracingService.Trace("WTF--------------");
+                        tracingService.Trace("something went wrong--------------");
                         throw new InvalidPluginExecutionException("something went wrong", ex1);
                     }
                     tracingService.Trace("PASS--------------");
